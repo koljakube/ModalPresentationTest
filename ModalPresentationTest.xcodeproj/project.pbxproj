@@ -13,6 +13,7 @@
 		638652F519FF0BC800FD9A61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638652F419FF0BC800FD9A61 /* Images.xcassets */; };
 		638652F819FF0BC800FD9A61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638652F619FF0BC800FD9A61 /* LaunchScreen.xib */; };
 		6386530419FF0BC800FD9A61 /* ModalPresentationTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6386530319FF0BC800FD9A61 /* ModalPresentationTestTests.swift */; };
+		6386530E19FFADDC00FD9A61 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6386530D19FFADDC00FD9A61 /* Segues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		638652FD19FF0BC800FD9A61 /* ModalPresentationTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalPresentationTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6386530219FF0BC800FD9A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6386530319FF0BC800FD9A61 /* ModalPresentationTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationTestTests.swift; sourceTree = "<group>"; };
+		6386530D19FFADDC00FD9A61 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				638652ED19FF0BC800FD9A61 /* AppDelegate.swift */,
+				6386530D19FFADDC00FD9A61 /* Segues.swift */,
 				638652EF19FF0BC800FD9A61 /* ViewController.swift */,
 				638652F119FF0BC800FD9A61 /* Main.storyboard */,
 				638652F419FF0BC800FD9A61 /* Images.xcassets */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				638652F019FF0BC800FD9A61 /* ViewController.swift in Sources */,
+				6386530E19FFADDC00FD9A61 /* Segues.swift in Sources */,
 				638652EE19FF0BC800FD9A61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

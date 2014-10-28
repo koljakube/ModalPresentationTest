@@ -9,25 +9,51 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  var rearViewController: UIViewController? = nil {
+    didSet {
+      oldValue?.removeFromParentViewController()
+      if let theController = rearViewController {
+        addChildViewController(theController)
+        view.addSubview(theController.view)
+      }
+    }
+  }
+  
+  var frontViewController: UIViewController? = nil {
+    didSet {
+      oldValue?.removeFromParentViewController()
+      if let theController = frontViewController {
+        addChildViewController(theController)
+        view.addSubview(theController.view)
+      }
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+    setStoryboardSegueViewControllers()
+    view.setTranslatesAutoresizingMaskIntoConstraints(false)
   }
   
   @IBAction func unwind(segue: UIStoryboardSegue) {
     NSLog("unwind")
   }
 
-  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    NSLog("prepare")
+    if segue.identifier == "rear" {
+      rearViewController = segue.destinationViewController as? UIViewController
+    }
+    else if segue.identifier == "front" {
+      frontViewController = segue.destinationViewController as? UIViewController
+    }
+    
+    super.prepareForSegue(segue, sender: sender)
   }
 
+  private func setStoryboardSegueViewControllers() {
+    performSegueWithIdentifier("rear", sender: self)
+    performSegueWithIdentifier("front", sender: self)
+  }
+  
 }
-
